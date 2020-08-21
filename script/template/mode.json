@@ -1,0 +1,14 @@
+{
+    "EModeType::SERVER": {
+        "usage": "mkf-server (OPTIONS)",
+        "desc": "Run mkf server"
+    },
+    "EModeType::CONSOLE": {
+        "usage": "mkf-cli (OPTIONS) COMMAND",
+        "desc": "Run mkf RPC client"
+    },
+    "EModeType::MINER": {
+        "usage": "mkf-miner (OPTIONS)",
+        "desc": "Run mkf miner"
+    }
+}
