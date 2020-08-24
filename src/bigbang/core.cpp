@@ -561,12 +561,26 @@ Secret : ab14e1de9a0e805df0c79d50e1b065304814a247e7d52fc51fd0782e0eec27d6
 PubKey : 310be18f947a56f92541adbad67374facad61ab814c53fa5541488bea62fb47d
 Secret : 14e1abd0802f7065b55f5076d0d2cfbea159abd540a977e8d3afd4b3061bf47f
 
+Secret1="f1547396c4ec9f50a646b6ac791ee11f0493adc04940289752c2dc0494e040f5"
+PubKey1="579792c544d6a6c198498250c1fa1467a5e5eeb59435a6cdeb06085fb8c7b091"
+
+Secret2="43368761015b9de09dce66826188a22d1cb9d98a2b6e599c56bc384f839d67ff"
+PubKey2="6d9657d15cb91e074f98fdcbbcf311325beb1d8c2c0f6d65d8362c15c213a2f1"
+
+Secret3="be590f4db119efcff0247e5e08c7e840454b948e7a5c2993f84c12db9770fd8a"
+PubKey3="efd6b29ad69ea477c4f0ac859cdd00039b83c5b074c8b2f4f9038a781b9d63d5"
+
+addnewtemplate multisig '{"required": 2, "pubkeys": ["579792c544d6a6c198498250c1fa1467a5e5eeb59435a6cdeb06085fb8c7b091", "6d9657d15cb91e074f98fdcbbcf311325beb1d8c2c0f6d65d8362c15c213a2f1", "efd6b29ad69ea477c4f0ac859cdd00039b83c5b074c8b2f4f9038a781b9d63d5"]}'
+2080fczk6yq3e44t7dpgbtef7zwfkc96b4670yj3wyvex5pv898hc6yr5
+
+sendfrom 2080fczk6yq3e44t7dpgbtef7zwfkc96b4670yj3wyvex5pv898hc6yr5 1965p604xzdrffvg90ax9bk0q3xyqn5zz2vc9zpbe3wdswzazj7d144mm 6000 1
 */
 void CTestNetCoreProtocol::GetGenesisBlock(CBlock& block)
 {
     using namespace boost::posix_time;
     using namespace boost::gregorian;
-    const CDestination destOwner = CDestination(bigbang::crypto::CPubKey(uint256("68e4dca5989876ca64f16537e82d05c103e5695dfaf009a01632cb33639cc530")));
+
+    const CDestination destOwner = CAddress("2080fczk6yq3e44t7dpgbtef7zwfkc96b4670yj3wyvex5pv898hc6yr5");
 
     block.SetNull();
 
