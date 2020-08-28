@@ -19,9 +19,9 @@ static const int64 MAX_CLOCK_DRIFT = 80;
 
 static const int PROOF_OF_WORK_BITS_LOWER_LIMIT = 8;
 static const int PROOF_OF_WORK_BITS_UPPER_LIMIT = 200;
-static const int PROOF_OF_WORK_BITS_INIT_MAINNET = 10;
+static const int PROOF_OF_WORK_BITS_INIT_MAINNET = 34;
 static const int PROOF_OF_WORK_BITS_INIT_TESTNET = 10;
-static const uint32 PROOF_OF_WORK_DIFFICULTY_INTERVAL_MAINNET = 30;
+static const uint32 PROOF_OF_WORK_DIFFICULTY_INTERVAL_MAINNET = 10000;
 static const uint32 PROOF_OF_WORK_DIFFICULTY_INTERVAL_TESTNET = 30;
 
 static const int64 BBCP_TOKEN_INIT = 1000000000;
@@ -579,14 +579,14 @@ void CTestNetCoreProtocol::GetGenesisBlock(CBlock& block)
 {
     using namespace boost::posix_time;
     using namespace boost::gregorian;
-    
+
     const CDestination destOwner = CAddress("20804jmmhvgdq550rwfgwfrww16mbbvqx8zzdav1mpppdzg5b30n93cjd");
 
     block.SetNull();
 
     block.nVersion = CBlock::BLOCK_VERSION;
     block.nType = CBlock::BLOCK_GENESIS;
-    block.nTimeStamp = 1575043200;
+    block.nTimeStamp = 1598853600;
     block.hashPrev = 0;
 
     CTransaction& tx = block.txMint;
