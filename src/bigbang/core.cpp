@@ -84,7 +84,7 @@ void CCoreProtocol::GetGenesisBlock(CBlock& block)
 
     block.nVersion = CBlock::BLOCK_VERSION;
     block.nType = CBlock::BLOCK_GENESIS;
-    block.nTimeStamp = 1575043200;
+    block.nTimeStamp = 1598943600;
     block.hashPrev = 0;
 
     CTransaction& tx = block.txMint;
@@ -586,7 +586,7 @@ void CTestNetCoreProtocol::GetGenesisBlock(CBlock& block)
 
     block.nVersion = CBlock::BLOCK_VERSION;
     block.nType = CBlock::BLOCK_GENESIS;
-    block.nTimeStamp = 1598853600;
+    block.nTimeStamp = 1598943600;
     block.hashPrev = 0;
 
     CTransaction& tx = block.txMint;
@@ -635,12 +635,12 @@ CProofOfWorkParam::CProofOfWorkParam(bool fTestnet)
     if (fTestnet)
     {
         nProofOfWorkInit = (~uint256(uint64(0)) >> PROOF_OF_WORK_BITS_INIT_TESTNET);
-        nProofOfWorkDifficultyInterval = PROOF_OF_WORK_DIFFICULTY_INTERVAL_MAINNET;
+        nProofOfWorkDifficultyInterval = PROOF_OF_WORK_DIFFICULTY_INTERVAL_TESTNET;
     }
     else
     {
         nProofOfWorkInit = (~uint256(uint64(0)) >> PROOF_OF_WORK_BITS_INIT_MAINNET);
-        nProofOfWorkDifficultyInterval = PROOF_OF_WORK_DIFFICULTY_INTERVAL_TESTNET;
+        nProofOfWorkDifficultyInterval = PROOF_OF_WORK_DIFFICULTY_INTERVAL_MAINNET;
     }
 }
 
