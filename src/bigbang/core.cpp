@@ -78,7 +78,7 @@ const uint256& CCoreProtocol::GetGenesisBlockHash()
 
 void CCoreProtocol::GetGenesisBlock(CBlock& block)
 {
-    const CDestination destOwner = CAddress("20804vs89n8bzpd4pcs65mza9gfrqt30jmnqn2wmd7ks4qst54a47xz3p");
+    const CDestination destOwner = CAddress("20804jmmhvgdq550rwfgwfrww16mbbvqx8zzdav1mpppdzg5b30n93cjd");
 
     block.SetNull();
 
@@ -580,7 +580,7 @@ void CTestNetCoreProtocol::GetGenesisBlock(CBlock& block)
     using namespace boost::posix_time;
     using namespace boost::gregorian;
 
-    const CDestination destOwner = CAddress("20804jmmhvgdq550rwfgwfrww16mbbvqx8zzdav1mpppdzg5b30n93cjd");
+    const CDestination destOwner = CAddress("2080fczk6yq3e44t7dpgbtef7zwfkc96b4670yj3wyvex5pv898hc6yr5");
 
     block.SetNull();
 
